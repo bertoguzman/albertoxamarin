@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ALBERTO x XAMARIN</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/xamarin.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="#3C9CD7" data-background-transition="slide" class="titleSection">
+					<div class="titleBg">
+						<h2 style="color:white; letter-spacing:.5px;"><strong>Alberto <span style="font-size:50px;">&nbsp x &nbsp</span> XAMARIN</strong> </h2>
+						<div class="subTitle">
+								<br>
+								HOW WE CAN IMPROVE XAMARIN STUDIO'S USER EXPERIENCE.
+						</div>
+						<div class="italicNotes">
+								<br><br><br>
+								Navigate using arrow keys or the <strong>on-screen directional pad.</strong> Press the “ESC” Key to see presentation overview.
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2><strong>XAMARIN'S MOTIVATION</strong></h2>
+						<div class="content"><br>
+							"In mobile development, we've discovered a great opportunity: a need for products that developers love. And we are going to fill this need with great products that will make everyone's eyes shine every time they use our software."
+						</div>
+					<p>	<br><br>
+						-Miguel de Icaza, CTO of Xamarin
+					</p>
+
+				</section>
+
+				<section>
+					<h2> <strong>XAMARIN'S GROWTH</strong></h2>
+					<p>
+						We’ve seen Xamarin's product focus shift year-to-year in response to dynamically changing user needs.
+					</p><br>
+					<ul>
+						<li><strong>2011:&nbsp&nbsp</strong> Mono, MonoTouch and Mono for Android </li>
+						<li><strong>2012:&nbsp&nbsp</strong> Xamarin.Mac</li>
+						<li><strong>2013:&nbsp&nbsp</strong> Xamarin Studio and Integration with Visual Studio</li>
+						<li><strong>2014:&nbsp&nbsp</strong>TBA at Xamarin Evolve 2014</li>
+					</ul>
+				</section>
+				<section>
+				
+					<p>
+						With the addition of new services, Xamarin is getting more complex over time.
+					</p>
+					<p>
+						<br>
+						I want to evaluate the current process of updating Xamarin Studio and explore design optimizations that would contribute to a more delightful user experience.
+					</p>
+				</section>
+				<section>
+					<h2>
+						<strong>Heuristic Evaluation</strong>
+					</h2>
+					<p>
+						I evaluated Xamarin Studio's update user flow and tested it against Jakob Nielsen's <a href="http://www.nngroup.com/articles/ten-usability-heuristics"> Ten Usability Heuristics</a> for User Interface Design. With this data, I found three ways we can improve Xamarin's Update User Flow:
+					</p>
+				</section>
+					<section>
+					<h2><strong>IMPROVEMENTS</strong></h2>
+					<ul>
+						<li>Group Functionally Relevant Elements </li>
+						<li>Provide Visiblity of System Status</li>
+						<li>Manage Consistency Throughout Environment</li>
+					</ul>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section data-background="#87D37C" data-background-transition="slide">
+					<section >
+						<div class="titleBg">
+							<h2 style="color:white;"><strong>Strategy 01</strong><br>Group Functionally Relevant Elements </h2>
+							<p>
+								<br><strong>(Slide Down)</strong>
+							</p>
+						</div>
+					</section>
+					<section>
+						<p><strong>ISSUE 01: </strong>  Update icon is grouped with compilation status.</p>
+						<br><img class="pic" src="images/issue_01.png">
+					</section>
+					<section>
+						<p><strong>SUGGESTION 01: </strong>Separate both sets of features.</p>
+						<br><img class="pic" src="images/suggestion_01.png">
+					</section>
+					<section>
+						<p><strong>ISSUE 02:</strong> Update dialog is detached from update trigger.</p>
+						<img width="45%" class="pic" src="images/issue_02.png">
+					</section>
+					<section>
+						<p><strong>SUGGESTION 02: </strong> Move the update dialog closer to the button and indicate it's association with the trigger.</p>
+						<br><img width="60%" class="pic" src="images/suggestion_02.png">
+					</section>
+				</section>
+
+				<section data-background="#EB974E" data-background-transition="slide">
+					<section >
+						<div class="titleBg">
+							<h2 style="color:white;"><strong>Strategy 02</strong> <br>Provide Visiblity of System Status</h2>
+							<p>
+								<br><strong>(Slide Down)</strong>
+							</p>
+						</div>
+					</section>
+					<section>
+						<p><strong>ISSUE 03: </strong>Icon does not provide easily accessible information - only on hover or click.</p>
+						<br><img class="pic" src="images/issue_03.png">
+					</section>
+					<section>
+						<p><strong>SUGGESTION 03: </strong> Have the icon paired with a progress indicator to provide the user info on the system status.</p>
+						<br><img class="pic" src="images/suggestion_03_a.png">
+						<img class="pic" src="images/suggestion_03_b.png">
+					</section>
+					<section>
+						<p><strong>ISSUE 04:</strong> User must manually check if update is available by clicking the update icon.</p>
+						<br><img width="43%" class="pic" src="images/issue_04.png">
+					</section>
+					<section>
+						<p><strong>SUGGESTION 04: </strong>Inform user whether or not Xamarin Studio is up to date through button.</p>
+						<br><img class="pic" src="images/suggestion_04_a.png">
+						<img class="pic" src="images/suggestion_04_b.png">
+					</section>
+				</section>
+
+				<section data-background="#AEA8D3" data-background-transition="slide">
+					<section >
+						<div class="titleBg">
+							<h2 style="color:white;"> <strong>Strategy 03</strong><br>Manage Consistency Throughout Xamarin</h2>
+							<p>
+								<br><strong>(Slide Down)</strong>
+							</p>
+						</div>
+					</section>
+					<section>
+						<p><strong>ISSUE 05: </strong> Descriptions and status of channel versions are located in same area.</p>
+						<br><img width="45%" class="pic" src="images/issue_05_a.png"> <img width="45%" class="pic" src="images/issue_05_b.png">
+					</section>
+					<section>
+						<p><strong>SUGGESTION 05: </strong>Keep the descriptions and statuses separate.</p>
+						<img width="60%" class="pic" src="images/suggestion_05.png">
+					</section>
+					<section>
+						<p><strong>ISSUE 06:</strong> The up arrow icon does not universally indicate "update."</p>
+						<br><img width="30%" class="pic" src="images/issue_06.png">
+					</section>
+					<section>
+						<p><strong>SUGGESTION 06: </strong>Use an icon more commonly associated with the "update" action. (hint: Xamarin already uses it)</p>
+						<br><img class="pic" src="images/suggestion_06.png">
+					</section>
+				</section>
+				<section  >
+					<section>
+						<div class="titleBg">
+							<h2 style="color:white;"><strong> UI CHANGES</strong></h2>
+							<p>
+								The following are screenshots of a high-fidelity mockup of the simple changes to the update feature that may facilitate the experience of updating Xamarin Studio. <br>Created with Sketch and Framer Studio
+							</p>
+							<p>
+								<br><strong>(Slide Down)</strong>
+							</p>
+						</div>
+					</section>
+					<section>
+						<h3><strong>Update Flow Redesign</strong></h3>
+						<br>
+
+					     <video width="700"  loop controls>
+						  <source src="videos/xam_update_flow.mp4" type="video/mp4">
+						</video>
+					</section>
+					<section>
+						<h3><strong>Up To Date Condition</strong></h3>
+						<br>
+
+					     <video width="700" controls loop>
+						  <source src="videos/xam_up_to_date.mp4" type="video/mp4">
+						</video>
+					</section>
+				</section>
+
+				<section>
+					<p>
+						I’ve highlighted only a few out of several problems I noticed while evaluating my own experience with updating Xamarin Studio.
+					</p>
+				</section>
+
+				<section>
+					<h2><strong>WHAT TO DO NEXT</strong></h2>
+					<p>
+						These are suggestions, not solutions. Prototypes need to be designed, iterated, and tested upon until we are satisfied by our results.
+					</p>
+					<p><br>
+						We need to set up quantitative and analytical tools to measure the effectiveness of each design decision we make.
+					</p>
+				</section>
+
+				<section>
+					<h2><strong>Let's Talk</strong></h2>
+					<p>
+						If you would like to discuss these results or see more of my findings, you may contact me at <a target="_blank" href="mailto:hello@aguzman.me">hello@aguzman.me</a>. Other projects I’ve done are available at my <a target="_blank" href="www.aguzman.me">website.</a>
+					</p>
+				</section>
+
+
+
+				<section>
+					<h3><strong>Thank you for your time.</strong></h3>
+					<h3>:)</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

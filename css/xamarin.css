@@ -1,0 +1,11 @@
+.titleBg{
+	background-color: black;
+	padding: 50px !important;
+	color: white !important;
+	width:900px !important;
+}
+
+section .titleSection{
+	padding: 20px;
+}
+
